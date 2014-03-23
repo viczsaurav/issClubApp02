@@ -1,8 +1,8 @@
 package sg.edu.nus.iss.club;
 
-import java.io.BufferedReader;
+//import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+//import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class ClubApplication {
 	 */
 	public static void main(String[] args) throws IOException, BadBookingException, ParseException{
 		
-		Person p1, p2, p3; 
+		//Person p1, p2, p3; 
 		Facility f1, f2;
 		Member m1, m2, m3;
 		Club c1 = new Club();

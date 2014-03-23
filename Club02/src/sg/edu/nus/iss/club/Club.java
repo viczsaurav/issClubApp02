@@ -7,6 +7,7 @@ public class Club {
 	private int numMembers;
 	private ArrayList<Member> members;
 	private HashMap<String,Facility> facilities;
+	private BookingRegister bReg;
 	
 	public Club(){
 		numMembers = 0;
@@ -83,5 +84,10 @@ public class Club {
 	public void show(){
 		showMembers();
 		showFacilities();
+	}
+	
+// FOR BOOKING
+	public void addBooking(int memberNumber, String facilityName, Date sDate, Date eDate){
+		
 	}
 }
