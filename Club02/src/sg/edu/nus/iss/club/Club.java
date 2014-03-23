@@ -1,5 +1,6 @@
 package sg.edu.nus.iss.club;
 
+import java.awt.print.Book;
 import java.util.*;
 
 public class Club {
@@ -87,7 +88,25 @@ public class Club {
 	}
 	
 // FOR BOOKING
-	public void addBooking(int memberNumber, String facilityName, Date sDate, Date eDate){
-		
+	public void addBooking(int memberNumber, String facilityName, 
+							Date sDate, Date eDate)
+									throws BadBookingException {
+		bReg.addBooking(getMember(memberNumber), 
+						getFacility(facilityName), 
+						sDate, eDate);
+	}
+	
+// FOR BOOKING
+	public ArrayList<Booking> getBookings(String facName, Date sDate, Date eDate){
+		ArrayList<Booking> bookings = bReg.getBookings(getFacility(facName), sDate, eDate);
+		return bookings;
+	}
+	
+// FOR BOOKING
+	public void showBookings(String facName, Date sDate, Date eDate){
+		ArrayList<Booking> bList = getBookings(facName, sDate, eDate);
+		for (Booking b : bList){
+			b.show();
+		}
 	}
 }
