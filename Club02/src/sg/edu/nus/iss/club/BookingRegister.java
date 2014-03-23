@@ -26,5 +26,6 @@ public class BookingRegister {
 				}
 			}
 		}
+		bookingList.add(booking);
 	}
 }
