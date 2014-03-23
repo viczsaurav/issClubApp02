@@ -73,13 +73,18 @@ public class ClubApplication {
 		f2 = c2.addFacility("Swimming Pool", "You can enjoy here on hot summer day");
 		c3.addFacility("Bar","");
 		
-		//m1.show();
-		//m2.show();
-		//m3.show();
+		m1.show();
+		m2.show();
+		m3.show();
+		f1.show();
+		f2.show();
 		
 		// Showing Members
 		ArrayList<Member> members = new ArrayList<Member>();
 		members = c1.getMembers();
+		for(Member m : members){
+			System.out.println("* "+m);
+		}
 		System.out.println("Current Members :");
 		c1.showMembers();
 		System.out.println("Member with id "+idx+" is "+c1.getMember(idx));
